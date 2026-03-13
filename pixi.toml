@@ -1,0 +1,36 @@
+[workspace]
+name = "rewire-turtlebot3"
+version = "0.1.0"
+description = "TurtleBot3 simulation for testing rewire"
+channels = ["conda-forge", "https://prefix.dev/rewire"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+colcon-common-extensions = ">=0.3.0,<0.4"
+python = ">=3.11"
+rewire = "*"
+
+[feature.humble]
+channels = ["robostack-humble"]
+
+[feature.humble.dependencies]
+ros-humble-rclpy = ">=3.3"
+ros-humble-sensor-msgs = ">=4.2"
+ros-humble-geometry-msgs = ">=4.2"
+ros-humble-std-msgs = ">=4.2"
+ros-humble-tf2-ros-py = "*"
+ros-humble-ros2launch = "*"
+ros-humble-robot-state-publisher = ">=3.0"
+ros-humble-turtlebot3-description = "*"
+ros-humble-xacro = ">=2.0"
+
+[environments]
+default = ["humble"]
+
+[tasks]
+build = "sh -c 'colcon build --symlink-install --event-handlers console_direct+ --cmake-args -G Ninja -DPython3_EXECUTABLE=$(which python) -DPython_EXECUTABLE=$(which python)'"
+launch = { cmd = "bash -c 'source install/setup.sh && ros2 launch turtlebot3 sim.launch.py'", depends-on = ["build"] }
+clean = "rm -rf build/ install/ log/"
+
+[activation]
+scripts = ["install/setup.sh"]
