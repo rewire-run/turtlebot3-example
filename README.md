@@ -1,5 +1,7 @@
 # rewire-turtlebot3
 
+[![Pixi Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json)](https://pixi.sh)
+
 TurtleBot3 Burger simulation for testing [rewire](https://github.com/rewire-run/rewire) with URDF, TF trees,
 joint states, and pose with covariance.
 
