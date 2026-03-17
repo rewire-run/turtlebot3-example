@@ -24,7 +24,7 @@ def generate_launch_description():
                 parameters=[{"robot_description": urdf}],
             ),
             Node(
-                package="turtlebot3",
+                package="rewire_turtlebot3",
                 executable="sim",
             ),
         ]

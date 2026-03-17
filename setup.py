@@ -3,7 +3,7 @@ from glob import glob
 
 from setuptools import setup
 
-package_name = "turtlebot3"
+package_name = "rewire_turtlebot3"
 
 setup(
     name=package_name,
@@ -15,7 +15,7 @@ setup(
     install_requires=["setuptools"],
     entry_points={
         "console_scripts": [
-            "sim = turtlebot3.sim:main",
+            "sim = rewire_turtlebot3.sim:main",
         ],
     },
 )

@@ -3,6 +3,8 @@
 TurtleBot3 Burger simulation for testing [rewire](https://github.com/rewire-run/rewire) with URDF, TF trees,
 joint states, and pose with covariance.
 
+![TurtleBot3 Navigation](assets/turtlebot3-navigation.png)
+
 ## Topics
 
 | Topic | Type | Description |
@@ -24,7 +26,7 @@ pixi install
 ## Usage
 
 ```bash
-pixi run launch
+pixi run ros2 launch rewire_turtlebot3 sim.launch.py
 ```
 
 In a separate terminal, run rewire to visualize in Rerun:
