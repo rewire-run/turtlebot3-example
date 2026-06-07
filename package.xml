@@ -5,8 +5,8 @@
   <version>0.1.0</version>
   <description>Simulates a TurtleBot3 moving in a straight line for testing rewire-bridge</description>
   <maintainer email="alvgaona@gmail.com">Alvaro J. Gaona</maintainer>
-  <url type="website">https://github.com/rewire-run/rewire-turtlebot3</url>
-  <url type="repository">https://github.com/rewire-run/rewire-turtlebot3</url>
+  <url type="website">https://github.com/rewire-run/turtlebot3-example</url>
+  <url type="repository">https://github.com/rewire-run/turtlebot3-example</url>
   <license>MIT</license>
 
   <buildtool_depend>ros2launch</buildtool_depend>
