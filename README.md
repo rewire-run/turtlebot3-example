@@ -28,13 +28,21 @@ pixi install
 ## Usage
 
 ```bash
-pixi run ros2 launch rewire_turtlebot3 sim.launch.py
+pixi run app
 ```
 
 In a separate terminal, run rewire to visualize in Rerun:
 
 ```bash
-pixi run rewire record --all
+pixi run viz
+```
+
+`app` wraps `ros2 launch rewire_turtlebot3 sim.launch.py` and `viz` wraps `rewire record --all`. Add
+`-e <env>` to pick a ROS 2 distro other than the default (jazzy):
+
+```bash
+pixi run -e humble app
+pixi run -e kilted app
 ```
 
 ## How it works

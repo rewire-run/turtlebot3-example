@@ -15,26 +15,68 @@ backend = { name = "pixi-build-ros", version = "*" }
 colcon-common-extensions = ">=0.3.0,<0.4"
 python = ">=3.11"
 rewire = "*"
+zenohd = "*"
+
+[tasks]
+app = "ros2 launch rewire_turtlebot3 sim.launch.py"
+viz = "rewire record --all"
 
 [feature.humble]
 channels = ["robostack-humble"]
 
+# [feature.humble.activation]
+# env = { RMW_IMPLEMENTATION = "rmw_zenoh_cpp" }
+
 [feature.humble.dependencies]
+ros-humble-rmw-zenoh-cpp = "*"
 ros-humble-ros2cli = ">=0.18.17,<0.19"
 ros-humble-ros2launch = ">=0.19.13,<0.20"
 ros-humble-ros2service = ">=0.18.17,<0.19"
 ros-humble-rewire-turtlebot3 = { path = "." }
+ros-humble-ros2topic = ">=0.18.17,<0.19"
+ros-humble-ros2doctor = ">=0.18.17,<0.19"
+ros-humble-ros2node = ">=0.18.17,<0.19"
+ros-humble-ros2run = ">=0.18.17,<0.19"
 
 [feature.jazzy]
 channels = ["robostack-jazzy"]
 
+# [feature.jazzy.activation]
+# env = { RMW_IMPLEMENTATION = "rmw_zenoh_cpp" }
+
 [feature.jazzy.dependencies]
+ros-jazzy-rmw-zenoh-cpp = "*"
 ros-jazzy-ros2cli = ">=0.32.8,<0.33"
 ros-jazzy-ros2launch = ">=0.26.11,<0.27"
 ros-jazzy-ros2service = ">=0.32.8,<0.33"
 ros-jazzy-rewire-turtlebot3 = { path = "." }
+ros-jazzy-ros2topic = ">=0.32.8,<0.33"
+ros-jazzy-ros2doctor = ">=0.32.8,<0.33"
+ros-jazzy-ros2node = ">=0.32.8,<0.33"
+ros-jazzy-ros2run = ">=0.32.8,<0.33"
+
+[feature.kilted]
+channels = ["robostack-kilted"]
+
+# [feature.kilted.activation]
+# env = { RMW_IMPLEMENTATION = "rmw_zenoh_cpp" }
+
+[feature.kilted.dependencies]
+ros-kilted-rmw-zenoh-cpp = "*"
+ros-kilted-ros2cli = ">=0.38.2,<0.39"
+ros-kilted-ros2launch = ">=0.28.5,<0.29"
+ros-kilted-ros2service = ">=0.38.2,<0.39"
+ros-kilted-rewire-turtlebot3 = { path = "." }
+ros-kilted-ros2topic = ">=0.38.2,<0.39"
+ros-kilted-ros2doctor = ">=0.38.2,<0.39"
+ros-kilted-ros2node = ">=0.38.2,<0.39"
+ros-kilted-ros2run = ">=0.38.2,<0.39"
+
+# No lyrical environment: robostack-lyrical does not publish
+# ros-lyrical-turtlebot3-description yet.
 
 [environments]
-default = ["humble"]
+default = ["jazzy"]
 jazzy = ["jazzy"]
 humble = ["humble"]
+kilted = ["kilted"]
