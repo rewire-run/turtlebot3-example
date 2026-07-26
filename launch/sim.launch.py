@@ -1,14 +1,22 @@
 import subprocess
+from pathlib import Path
 
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    urdf_path = (
+        Path(get_package_share_directory("turtlebot3_description"))
+        / "urdf"
+        / "turtlebot3_burger.urdf"
+    )
+
     urdf = subprocess.run(
         [
             "xacro",
-            "/opt/ros/humble/share/turtlebot3_description/urdf/turtlebot3_burger.urdf",
+            str(urdf_path),
             "namespace:=/",
         ],
         capture_output=True,
