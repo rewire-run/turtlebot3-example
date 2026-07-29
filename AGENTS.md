@@ -23,7 +23,6 @@ package.xml          # ROS package manifest
 setup.py / setup.cfg # ament_python install
 pixi.toml               # env, deps, tasks (app / viz)
 turtlebot3-example.rbl  # Rerun blueprint (repo root)
-assets/                 # README images
 ```
 
 ## Runtime
