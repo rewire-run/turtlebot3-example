@@ -37,6 +37,7 @@ ros-humble-ros2topic = ">=0.18.17,<0.19"
 ros-humble-ros2doctor = ">=0.18.17,<0.19"
 ros-humble-ros2node = ">=0.18.17,<0.19"
 ros-humble-ros2run = ">=0.18.17,<0.19"
+ros-humble-turtlebot3-description = "*"
 
 [feature.jazzy]
 channels = ["robostack-jazzy"]
@@ -54,6 +55,7 @@ ros-jazzy-ros2topic = ">=0.32.8,<0.33"
 ros-jazzy-ros2doctor = ">=0.32.8,<0.33"
 ros-jazzy-ros2node = ">=0.32.8,<0.33"
 ros-jazzy-ros2run = ">=0.32.8,<0.33"
+ros-jazzy-turtlebot3-description = "*"
 
 [feature.kilted]
 channels = ["robostack-kilted"]
@@ -71,6 +73,7 @@ ros-kilted-ros2topic = ">=0.38.2,<0.39"
 ros-kilted-ros2doctor = ">=0.38.2,<0.39"
 ros-kilted-ros2node = ">=0.38.2,<0.39"
 ros-kilted-ros2run = ">=0.38.2,<0.39"
+ros-kilted-turtlebot3-description = "*"
 
 # No lyrical environment: robostack-lyrical does not publish
 # ros-lyrical-turtlebot3-description yet.
