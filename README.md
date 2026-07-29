@@ -37,8 +37,9 @@ In a separate terminal, run rewire to visualize in Rerun:
 pixi run viz
 ```
 
-`app` wraps `ros2 launch rewire_turtlebot3 sim.launch.py` and `viz` wraps `rewire record --all`. Add
-`-e <env>` to pick a ROS 2 distro other than the default (jazzy):
+`app` launches `sim.launch.py`. `viz` runs `rewire record` with
+[`config/rewire.json5`](config/rewire.json5) (all topics except `/rosout` and `/parameter_events`).
+Add `-e <env>` to pick a ROS 2 distro other than the default (jazzy):
 
 ```bash
 pixi run -e humble app

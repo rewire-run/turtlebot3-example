@@ -1,0 +1,14 @@
+{
+  // Application ID shown in the Rerun viewer title bar.
+  app_id: "turtlebot3-example",
+
+  // Per-topic diagnostics (hz, bytes/sec, drops, latency).
+  diagnostics: true,
+
+  // Subscribe to everything the sim + robot_state_publisher publish.
+  // Glob notes: "/**" matches all topics; a bare "*" matches nothing.
+  topics: {
+    include: ["/**"],
+    exclude: ["/rosout", "/parameter_events"],
+  },
+}

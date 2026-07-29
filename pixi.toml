@@ -19,7 +19,7 @@ zenohd = "*"
 
 [tasks]
 app = "ros2 launch rewire_turtlebot3 sim.launch.py"
-viz = "rewire record --all"
+viz = "rewire record --config $PIXI_PROJECT_ROOT/config/rewire.json5"
 
 [feature.humble]
 channels = ["robostack-humble"]
