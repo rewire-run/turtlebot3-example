@@ -17,12 +17,12 @@ launch/
 urdf/                # vendored Burger URDF (Apache 2.0, ROBOTIS)
 meshes/              # vendored Burger meshes (bases/wheels/sensors)
 config/
-  rewire.json5       # rewire record config (used by `pixi run viz`)
-resource/            # ament package marker
-package.xml          # ROS package manifest
-setup.py / setup.cfg # ament_python install
+  rewire.json5          # rewire record config (used by `pixi run viz`)
+  turtlebot3-example.rbl  # Rerun blueprint
+resource/               # ament package marker
+package.xml             # ROS package manifest
+setup.py / setup.cfg    # ament_python install
 pixi.toml               # env, deps, tasks (app / viz)
-turtlebot3-example.rbl  # Rerun blueprint (repo root)
 ```
 
 ## Runtime
