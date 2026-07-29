@@ -8,7 +8,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     urdf_path = (
-        Path(get_package_share_directory("turtlebot3_description"))
+        Path(get_package_share_directory("rewire_turtlebot3"))
         / "urdf"
         / "turtlebot3_burger.urdf"
     )

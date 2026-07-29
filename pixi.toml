@@ -37,7 +37,6 @@ ros-humble-ros2topic = ">=0.18.17,<0.19"
 ros-humble-ros2doctor = ">=0.18.17,<0.19"
 ros-humble-ros2node = ">=0.18.17,<0.19"
 ros-humble-ros2run = ">=0.18.17,<0.19"
-ros-humble-turtlebot3-description = "*"
 
 [feature.jazzy]
 channels = ["robostack-jazzy"]
@@ -55,7 +54,6 @@ ros-jazzy-ros2topic = ">=0.32.8,<0.33"
 ros-jazzy-ros2doctor = ">=0.32.8,<0.33"
 ros-jazzy-ros2node = ">=0.32.8,<0.33"
 ros-jazzy-ros2run = ">=0.32.8,<0.33"
-ros-jazzy-turtlebot3-description = "*"
 
 [feature.kilted]
 channels = ["robostack-kilted"]
@@ -73,13 +71,27 @@ ros-kilted-ros2topic = ">=0.38.2,<0.39"
 ros-kilted-ros2doctor = ">=0.38.2,<0.39"
 ros-kilted-ros2node = ">=0.38.2,<0.39"
 ros-kilted-ros2run = ">=0.38.2,<0.39"
-ros-kilted-turtlebot3-description = "*"
 
-# No lyrical environment: robostack-lyrical does not publish
-# ros-lyrical-turtlebot3-description yet.
+[feature.lyrical]
+channels = ["https://prefix.dev/robostack-lyrical"]
+
+# [feature.lyrical.activation]
+# env = { RMW_IMPLEMENTATION = "rmw_zenoh_cpp" }
+
+[feature.lyrical.dependencies]
+ros-lyrical-rmw-zenoh-cpp = ">=0.10.4,<0.11"
+ros-lyrical-ros2cli = ">=0.40.7,<0.41"
+ros-lyrical-ros2run = ">=0.40.7,<0.41"
+ros-lyrical-ros2launch = ">=0.29.8,<0.30"
+ros-lyrical-ros2service = ">=0.40.7,<0.41"
+ros-lyrical-ros2topic = ">=0.40.7,<0.41"
+ros-lyrical-ros2doctor = ">=0.40.7,<0.41"
+ros-lyrical-ros2node = ">=0.40.7,<0.41"
+ros-lyrical-rewire-turtlebot3 = { path = "." }
 
 [environments]
 default = ["jazzy"]
 jazzy = ["jazzy"]
 humble = ["humble"]
 kilted = ["kilted"]
+lyrical = ["lyrical"]

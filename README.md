@@ -17,6 +17,20 @@ joint states, and pose with covariance.
 | `/tf` | `tf2_msgs/TFMessage` | Dynamic transform: `odom` → `base_footprint` |
 | `/tf_static` | `tf2_msgs/TFMessage` | Static transforms from URDF |
 
+## Environments
+
+| Environment | ROS distro |
+|-------------|------------|
+| `default` / `jazzy` | Jazzy |
+| `humble` | Humble |
+| `kilted` | Kilted |
+| `lyrical` | Lyrical |
+
+The Burger URDF and meshes are vendored in this package (from ROBOTIS
+`turtlebot3_description`, Apache 2.0), so no external
+`turtlebot3_description` package is required — including on Lyrical, where
+robostack does not publish it yet.
+
 ## Setup
 
 Requires [pixi](https://pixi.sh).
@@ -44,12 +58,13 @@ Add `-e <env>` to pick a ROS 2 distro other than the default (jazzy):
 ```bash
 pixi run -e humble app
 pixi run -e kilted app
+pixi run -e lyrical app
 ```
 
 ## How it works
 
 The launch file starts two nodes:
 
-- **robot_state_publisher** — publishes the TurtleBot3 Burger URDF and static TF tree
+- **robot_state_publisher** — publishes the vendored TurtleBot3 Burger URDF and static TF tree
 - **sim** — drives the robot in a straight line, publishing joint states, dynamic TF, and pose with
   covariance (uncertainty grows over time)

@@ -13,6 +13,19 @@ setup(
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         (os.path.join("share", package_name), ["package.xml"]),
         (os.path.join("share", package_name, "launch"), glob("launch/*.launch.py")),
+        (os.path.join("share", package_name, "urdf"), glob("urdf/*")),
+        (
+            os.path.join("share", package_name, "meshes", "bases"),
+            glob("meshes/bases/*"),
+        ),
+        (
+            os.path.join("share", package_name, "meshes", "wheels"),
+            glob("meshes/wheels/*"),
+        ),
+        (
+            os.path.join("share", package_name, "meshes", "sensors"),
+            glob("meshes/sensors/*"),
+        ),
     ],
     install_requires=["setuptools"],
     entry_points={
